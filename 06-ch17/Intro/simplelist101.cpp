@@ -1,7 +1,7 @@
 /**
  * @file simplelist.cpp
  * @author Gabe de la Cruz (gvdelacruz@nic.edu)
- * @brief 
+ * @brief Introduction to linked list. A very basic implementation.
  * @version 0.1
  * @date 2021-02-17
  * 
