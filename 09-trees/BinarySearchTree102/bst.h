@@ -1,10 +1,10 @@
 /**
- * @file   binarytree.h
+ * @file   bst.h
  * @author CS151 North Idaho College
  * @date   2020/10/12
  */
-#ifndef BINARYTREE_H
-#define BINARYTREE_H
+#ifndef BST_H
+#define BST_H
 
 #include <iostream>
 #include <sstream>
@@ -28,11 +28,11 @@ struct TreeNode
 };
 
 
-class BinaryTree
+class BinarySearchTree
 {
 public:
-    BinaryTree(); // 1
-    ~BinaryTree(); // 9
+    BinarySearchTree(); // 1
+    ~BinarySearchTree(); // 9
 
     // Adding to the tree
     void insert(int newData); // 2
@@ -58,6 +58,7 @@ private:
     TreeNode *mRoot;
 
     // helper functions
+    void toStringInOrder(TreeNode *ptr, ostringstream &ostr) const;
 };
 
 #endif
