@@ -13,6 +13,7 @@
 using std::string;
 using std::ostringstream;
 
+// typedef int DATATYPE;
 struct TreeNode
 {
     int data;
@@ -27,7 +28,7 @@ struct TreeNode
     }
 };
 
-
+typedef TreeNode* TreeNodePtr;
 class BinarySearchTree
 {
 public:
@@ -55,10 +56,20 @@ public:
     int height() const; // 5
 
 private:
-    TreeNode *mRoot;
+    TreeNodePtr mRoot;
 
     // helper functions
     void toStringInOrder(TreeNode *ptr, ostringstream &ostr) const;
+    void toStringPreOrder(TreeNode *ptr, ostringstream &ostr) const;
+    void toStringPostOrder(TreeNode *ptr, ostringstream &ostr) const;
+    void toStringLevelOrder(TreeNode *ptr, ostringstream &ostr, int level) const;
+
+    int height(TreeNode *ptr) const;
+
+    bool isLeaf(TreeNode *ptr) const;
+    void removeR(TreeNodePtr &ptr, int value);
+    void deleteNode(TreeNodePtr &nodePtr, int value);
+    int processInOrderSuccessor(TreeNodePtr &ptr);
 };
 
 #endif
