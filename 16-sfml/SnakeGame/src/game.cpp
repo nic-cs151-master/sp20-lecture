@@ -31,10 +31,11 @@ void Game::run()
     while (mWindow.isOpen())
     {
         timeSinceLastUpdate += clock.restart();
+        handleInput();
         while (timeSinceLastUpdate > TIME_PER_FRAME)
         {
             timeSinceLastUpdate -= TIME_PER_FRAME;
-            handleInput();
+            
             update();
         }
         render();
