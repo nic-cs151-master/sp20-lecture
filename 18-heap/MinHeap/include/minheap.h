@@ -12,6 +12,7 @@ class MinHeap
 {
 public:
     MinHeap(int capacity=10);
+    ~MinHeap();
 
     int getMin() const;   // returns the minimum key (key at root)
     int extractMin();     // extract the root which is the minimum element

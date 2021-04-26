@@ -12,7 +12,7 @@
 #include "world.h"
 
 // Set game to run at 30 frames per second
-const sf::Time TIME_PER_FRAME = sf::seconds(1.f / 30.f);
+const sf::Time TIME_PER_FRAME = sf::seconds(1.f / 10.f);
 
 class Game
 {

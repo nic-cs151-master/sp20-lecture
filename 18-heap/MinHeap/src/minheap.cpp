@@ -7,6 +7,11 @@ MinHeap::MinHeap(int capacity)
     mHeapArray = new int[capacity];
 }
 
+MinHeap::~MinHeap()
+{
+    delete [] mHeapArray;
+}
+
 int MinHeap::parent(int i)
 {
     return (i - 1) / 2;

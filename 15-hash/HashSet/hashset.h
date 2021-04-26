@@ -13,7 +13,7 @@ const int P = 16908799;
 class HashSet
 {
 public:
-    HashSet();
+    HashSet(int capacity=10);
     ~HashSet();
 
     void add(int key);
